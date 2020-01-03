@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <fragment
-        android:name="com.example.myapplication.DetailWeatherFragment"
+        android:name="com.example.myapplication.DetailFragmentInDayFragment"
         android:id="@+id/sas"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

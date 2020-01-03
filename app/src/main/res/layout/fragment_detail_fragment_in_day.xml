@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailFragmentInDayFragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ctlWeatherDeatailDay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_thunder"
+        android:fitsSystemWindows="true">
+
+        <TextView
+            android:id="@+id/txtCity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="70dp"
+            android:text="Chicago"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Chicago" />
+
+        <TextView
+            android:id="@+id/txtTimeUpdated"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Updated: 11:16 pm"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtCity"
+            tools:text="Updated: 11:16 pm" />
+
+        <TextView
+            android:id="@+id/txtMinTemperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Min: -25°C"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/txtViewTemperature"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.516"
+            app:layout_constraintStart_toEndOf="@+id/txtViewTemperature"
+            app:layout_constraintTop_toTopOf="@+id/txtViewTemperature"
+            app:layout_constraintVertical_bias="0.31"
+            tools:text="Min: -25°C" />
+
+        <TextView
+            android:id="@+id/txtMaxTemperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Max: 25°C"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/txtMinTemperature"
+            app:layout_constraintTop_toBottomOf="@+id/txtMinTemperature"
+            tools:text="Max: 25°C" />
+
+        <TextView
+            android:id="@+id/txtViewTemperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:text="25°C"
+            android:textColor="@color/white"
+            android:textSize="75sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imageViewWeatherIcon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtTimeUpdated"
+            tools:text="25°C" />
+
+        <ImageView
+            android:id="@+id/imageViewWeatherIcon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/sunny"
+            app:layout_constraintBottom_toBottomOf="@+id/txtViewTemperature"
+            app:layout_constraintEnd_toStartOf="@+id/txtViewTemperature"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txtViewTemperature"
+            tools:src="@drawable/sunny" />
+
+        <TextView
+            android:id="@+id/txtViewWeatherMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="28dp"
+            android:text="Thunder"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtViewTemperature"
+            tools:text="Cloud &amp; Sun" />
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtViewWeatherMain"
+            app:cardBackgroundColor="#BA74F5"
+            android:layout_marginTop="28dp"
+            app:cardCornerRadius="24dp"
+            app:layout_constraintTop_toBottomOf="@+id/txtViewWeatherMain"
+            tools:layout_editor_absoluteX="49dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="95dp">
+
+                <ImageView
+                    android:id="@+id/imageViewHumidityIcon"
+                    android:layout_width="@dimen/_45sdp"
+                    android:layout_height="@dimen/_45sdp"
+                    android:background="@drawable/dripp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageViewWindIcon"
+                    app:layout_constraintTop_toTopOf="@+id/imageViewWindIcon"
+                    app:layout_constraintVertical_bias="1.0"
+                    tools:layout_editor_absoluteX="4dp"
+                    tools:src="@drawable/dripp"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/txtHumidity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Huminity"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageViewHumidityIcon"
+                    app:layout_constraintStart_toEndOf="@+id/imageViewHumidityIcon"
+                    app:layout_constraintTop_toTopOf="@+id/imageViewHumidityIcon"
+                    app:layout_constraintVertical_bias="0.21"
+                    tools:text="Huminity" />
+
+                <TextView
+                    android:id="@+id/txtHumidityValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="25%"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="@+id/txtHumidity"
+                    app:layout_constraintTop_toBottomOf="@+id/txtHumidity"
+                    tools:text="25%" />
+
+                <ImageView
+                    android:id="@+id/imageViewWindIcon"
+                    android:layout_width="@dimen/_65sdp"
+                    android:layout_height="@dimen/_65sdp"
+
+                    android:background="@drawable/wind"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.436"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:layout_editor_absoluteY="8dp"
+                    tools:src="@drawable/wind"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/txtWind"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Wind"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageViewWindIcon"
+                    app:layout_constraintStart_toEndOf="@+id/imageViewWindIcon"
+                    app:layout_constraintTop_toTopOf="@+id/imageViewWindIcon"
+                    app:layout_constraintVertical_bias="0.209"
+                    tools:text="Wind" />
+
+                <TextView
+                    android:id="@+id/txtWindValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="4 m/s"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="@+id/txtWind"
+                    app:layout_constraintTop_toBottomOf="@+id/txtWind"
+                    tools:text="4 m/s" />
+
+                <ImageView
+                    android:id="@+id/imageViewRainIcon"
+                    android:layout_width="@dimen/_65sdp"
+                    android:layout_height="@dimen/_65sdp"
+                    android:background="@drawable/rain"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageViewWindIcon"
+                    app:layout_constraintTop_toTopOf="@+id/imageViewWindIcon"
+                    app:layout_constraintVertical_bias="0.0"
+                    tools:layout_editor_absoluteX="269dp"
+                    tools:src="@drawable/rain"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/txtRain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Rain"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageViewRainIcon"
+                    app:layout_constraintStart_toEndOf="@+id/imageViewRainIcon"
+                    app:layout_constraintTop_toTopOf="@+id/imageViewRainIcon"
+                    app:layout_constraintVertical_bias="0.186"
+                    tools:text="Rain" />
+
+                <TextView
+                    android:id="@+id/txtRainValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="100 mm"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="@+id/txtRain"
+                    app:layout_constraintTop_toBottomOf="@+id/txtRain"
+                    tools:text="100 mm" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardViewHourOfDayContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtViewWeatherMain"
+            app:cardCornerRadius="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt"
+            app:layout_constraintVertical_bias="0.4">
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewHourOfDay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@null"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_weather_hour_of_day" />
+        </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
